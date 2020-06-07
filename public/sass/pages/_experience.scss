@@ -1,0 +1,55 @@
+#experience {
+    color: $color-white;
+    background-color: $bg-black;
+    background: url("../img/bg-experience.jpg") no-repeat center /cover;;
+}
+
+.experience {
+    max-width: 900px;
+    margin: 0 auto;
+
+    .education,
+    .experience-work {
+        display: flex;
+        align-items: center;
+        grid-gap: 2em;
+    }
+    h4 {
+        font-size: 1.3rem;
+        text-transform: uppercase;
+    }
+    .period {
+        width: 8em;
+        text-align: center;
+        .year {
+            font-size: 1.7rem;
+            font-weight: 900;
+            line-height: .85em;
+    
+            span{
+                font-size: 0.7em;
+            }
+        }
+        p:nth-child(2) {
+            font-style: italic;
+            font-size: 0.9em;
+        }
+    }
+    .experience-info {
+        p:first-child {
+            font-weight: 500;
+        }
+        p:last-child {
+            font-style: italic;
+        }
+    }
+    
+    .head-experience-work {
+        text-align: right;
+    }
+    .experience-work {
+        flex-direction: row-reverse;
+        text-align: right;
+    }
+}
+

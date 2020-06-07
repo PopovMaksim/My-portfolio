@@ -1,0 +1,41 @@
+#about {
+    background-color: #d7fbff;
+
+    display: grid;
+    grid-template-areas: "header header"
+                         "img content"
+                         "info content";
+    grid-column-gap: 3em;
+    justify-content: center;
+
+    margin: 0 auto;
+    padding: 0 0.5em;
+
+    .about-image {
+        grid-area: img;
+
+        img {
+            width: 15em;
+            height: 15em;
+            border-radius: 10em;
+        }
+    }
+    .about-info {
+        grid-area: info;
+
+        .info-item {
+            display: flex;
+            justify-content: space-between;
+            padding-bottom: -1em;
+
+            .info-title {
+                font-weight: bold;
+            }
+        }
+    }
+    .about-content {
+        grid-area: content;
+
+        max-width: 50em;
+    }
+}
