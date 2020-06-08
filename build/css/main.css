@@ -31,6 +31,21 @@ h3 {
   text-align: center;
 }
 
+.button {
+  display: inline-block;
+  font-weight: bold;
+  color: #105255;
+  padding: .5em 1.7em;
+  background-color: #00dbff;
+  border-radius: 5em;
+  box-shadow: 0 0 5px #00dbff, 0 0 25px #00dbff;
+  transition: .5s !important;
+}
+
+.button:hover {
+  transform: scale(1.1);
+}
+
 .home-page {
   height: 100vh;
   overflow: hidden;
@@ -85,19 +100,7 @@ h3 {
 }
 
 .navigation ul li a {
-  display: block;
   font-size: 1.5rem;
-  font-weight: bold;
-  color: #105255;
-  padding: .5em 1.7em;
-  background-color: #00dbff;
-  border-radius: 5em;
-  box-shadow: 0 0 5px #00dbff, 0 0 25px #00dbff;
-  transition: .5s;
-}
-
-.navigation ul li a:hover {
-  transform: scale(1.1);
 }
 
 .navigation ul li:nth-child(-n+3) {
@@ -126,7 +129,7 @@ h3 {
   grid-column-gap: 3em;
   justify-content: center;
   margin: 0 auto;
-  padding: 0 0.5em;
+  padding: 2em 1.5em;
 }
 
 #about .about-image {
@@ -146,7 +149,6 @@ h3 {
 #about .about-info .info-item {
   display: flex;
   justify-content: space-between;
-  padding-bottom: -1em;
 }
 
 #about .about-info .info-item .info-title {
@@ -155,7 +157,7 @@ h3 {
 
 #about .about-content {
   grid-area: content;
-  max-width: 50em;
+  max-width: 40em;
 }
 
 #experience {
@@ -165,8 +167,9 @@ h3 {
 }
 
 .experience {
-  max-width: 900px;
+  max-width: 800px;
   margin: 0 auto;
+  padding: 1em 2em 3em;
 }
 
 .experience .education,
@@ -216,4 +219,67 @@ h3 {
 .experience .experience-work {
   flex-direction: row-reverse;
   text-align: right;
+}
+
+.portfolio {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(15em, 1fr));
+  grid-gap: 5em;
+  margin: 0 auto;
+  padding: 0 1em;
+  max-width: 1200px;
+}
+
+.portfolio .work-item {
+  height: 30em;
+  overflow: hidden;
+  position: relative;
+}
+
+.portfolio .work-item .work-content,
+.portfolio .work-item .button,
+.portfolio .work-item .work-tags {
+  position: relative;
+  opacity: 0;
+  margin: 1em;
+  z-index: 1;
+  transition: .3s;
+}
+
+.portfolio .work-item .work-content {
+  margin: 1em;
+  color: #fff;
+}
+
+.portfolio .work-item::after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: .3s;
+  z-index: 0;
+}
+
+.portfolio .work-item:hover::after {
+  background-color: rgba(0, 0, 0, 0.9);
+}
+
+.portfolio .work-item:hover .work-content,
+.portfolio .work-item:hover .button {
+  opacity: 1;
+}
+
+.portfolio .work-restaurente {
+  background: url("../img/portfolio/work-restaurante.jpg") no-repeat top/cover;
+}
+
+.portfolio .work-adele {
+  background: url("../img/portfolio/work-adele.jpg") no-repeat top/cover;
+}
+
+.portfolio .work-minima {
+  background: url("../img/portfolio/work-minima.jpg") no-repeat top/cover;
 }

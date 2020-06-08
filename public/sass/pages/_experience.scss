@@ -1,12 +1,13 @@
 #experience {
     color: $color-white;
     background-color: $bg-black;
-    background: url("../img/bg-experience.jpg") no-repeat center /cover;;
+    background: url("../img/bg-experience.jpg") no-repeat center /cover;
 }
 
 .experience {
-    max-width: 900px;
+    max-width: 800px;
     margin: 0 auto;
+    padding: 1em 2em 3em;
 
     .education,
     .experience-work {
