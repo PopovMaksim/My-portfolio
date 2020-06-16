@@ -17,7 +17,7 @@ ul {
 .heading {
   grid-area: header;
   text-align: center;
-  padding: 0.5em;
+  padding: 1.5em;
 }
 
 .heading h2 {
@@ -221,12 +221,16 @@ h3 {
   text-align: right;
 }
 
+#portfolio {
+  background-color: #d7fbff;
+}
+
 .portfolio {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(15em, 1fr));
   grid-gap: 5em;
   margin: 0 auto;
-  padding: 0 1em;
+  padding: 0 2em 5em;
   max-width: 1200px;
 }
 
@@ -241,13 +245,12 @@ h3 {
 .portfolio .work-item .work-tags {
   position: relative;
   opacity: 0;
-  margin: 1em;
+  margin: 1.5em;
   z-index: 1;
   transition: .3s;
 }
 
 .portfolio .work-item .work-content {
-  margin: 1em;
   color: #fff;
 }
 
@@ -282,4 +285,57 @@ h3 {
 
 .portfolio .work-minima {
   background: url("../img/portfolio/work-minima.jpg") no-repeat top/cover;
+}
+
+#skills {
+  background-color: #151412;
+  color: #fff;
+}
+
+.skills {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  grid-gap: 3em;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 0 2em 3em;
+}
+
+.skills .skills-item {
+  max-width: 10em;
+  fill: #aeaeae;
+  transition: 0.3s;
+}
+
+.skills .skills-item:hover {
+  transform: scale(1.1);
+}
+
+.skills .skills-item:hover.skills-html {
+  fill: #e9622b;
+}
+
+.skills .skills-item:hover.skills-css {
+  fill: #1a6fb4;
+}
+
+.skills .skills-item:hover.skills-js {
+  fill: #efd81d;
+}
+
+.skills .skills-item:hover.skills-jquery {
+  fill: #1a71b5;
+}
+
+.skills .skills-item:hover.skills-sass {
+  fill: #c76494;
+}
+
+.skills .skills-item:hover.skills-gulp {
+  fill: #e44849;
+}
+
+.skills .skills-item:hover.skills-git {
+  fill: #e94e31;
 }

@@ -1,0 +1,44 @@
+#skills {
+    background-color: $bg-black;
+    color: $color-white;
+}
+
+.skills {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    grid-gap: 3em;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 2em 3em;
+
+    .skills-item {
+        max-width: 10em;
+        fill: $color-gray;
+        transition: 0.3s;
+        &:hover {
+            transform: scale(1.1);
+            &.skills-html {
+                fill: #e9622b;
+            }
+            &.skills-css {
+                fill: #1a6fb4;
+            }
+            &.skills-js {
+                fill: #efd81d;
+            }
+            &.skills-jquery {
+                fill: #1a71b5;
+            }
+            &.skills-sass {
+                fill: #c76494;
+            }
+            &.skills-gulp {
+                fill: #e44849;
+            }
+            &.skills-git {
+                fill: #e94e31;
+            }
+        }
+    } 
+}

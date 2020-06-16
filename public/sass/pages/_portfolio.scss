@@ -1,9 +1,12 @@
+#portfolio {
+    background-color: #d7fbff;
+}
 .portfolio {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(15em, 1fr));
     grid-gap: 5em;
     margin: 0 auto;
-    padding: 0 1em;
+    padding: 0 2em 5em;
     max-width: 1200px;
 
     .work-item {
@@ -15,12 +18,11 @@
         .work-tags {
             position: relative;
             opacity: 0;
-            margin: 1em;
+            margin: 1.5em;
             z-index: 1;
             transition: .3s;
         }
         .work-content {
-            margin: 1em;
             color: $color-white;
         }
         &::after {
