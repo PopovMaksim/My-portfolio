@@ -339,3 +339,12 @@ h3 {
 .skills .skills-item:hover.skills-git {
   fill: #e94e31;
 }
+
+.contacts {
+  display: grid;
+  grid-template-areas: 'info email' 'social email';
+}
+
+.contacts-email {
+  grid-area: email;
+}

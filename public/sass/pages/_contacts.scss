@@ -1,0 +1,9 @@
+.contacts {
+    display: grid;
+    grid-template-areas: 'info email'
+                         'social email';
+
+    &-email {
+        grid-area: email;
+    }
+}
