@@ -1,9 +1,11 @@
 const gulp = require('gulp'),
-    sass = require('gulp-sass');
+      sass = require('gulp-sass'),
+      autoprefixer = require('gulp-autoprefixer');
 
 gulp.task('sass', function() {
     return gulp.src('public/sass/**/*.scss')
         .pipe(sass({outputStyle: 'expanded'}).on('error', sass.logError))
+        .pipe(autoprefixer(['last 15 versions'], { cascade: true }))
         .pipe(gulp.dest('build/css'))
 });
 
