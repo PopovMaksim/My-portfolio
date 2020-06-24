@@ -46,6 +46,11 @@ h3 {
   transform: scale(1.1);
 }
 
+.container {
+  max-width: 900px;
+  margin: 0 auto 2em;
+}
+
 .home-page {
   height: 100vh;
   overflow: hidden;
@@ -296,8 +301,6 @@ h3 {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  max-width: 900px;
-  margin: 0 auto;
   padding: 0 2em 3em;
 }
 
@@ -347,4 +350,86 @@ h3 {
 
 .contacts-email {
   grid-area: email;
+}
+
+.contacts-email .email-subject,
+.contacts-email .email-content {
+  box-sizing: border-box;
+  width: 100%;
+  padding: 1em;
+}
+
+.contacts-email .email-content {
+  margin: 2em 0;
+}
+
+.contacts-email .email-send {
+  display: block;
+  margin: 0 auto;
+  padding: 1em 3em;
+  border: none;
+  border-radius: .4em;
+  font-size: 1rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.contacts-email .email-send:hover {
+  background-color: #00869c;
+}
+
+.contacts-info {
+  text-align: center;
+}
+
+.contacts-info span {
+  font-weight: 600;
+}
+
+.contacts-info a:hover {
+  color: #00869c;
+}
+
+.contacts-social ul {
+  display: flex;
+  justify-content: space-between;
+  max-width: 20em;
+  margin: 0 auto;
+}
+
+.contacts-social ul li {
+  fill: #aeaeae;
+  width: 20%;
+  transition: 0.5s;
+}
+
+.contacts-social ul li .svg-icon {
+  fill: #fff;
+}
+
+.contacts-social ul li:hover {
+  transform: scale(1.1);
+}
+
+.contacts-social ul li.svg-icon-vk:hover {
+  fill: #4e7db2;
+}
+
+.contacts-social ul li.svg-icon-github:hover {
+  fill: #823f9a;
+}
+
+.contacts-social ul li.svg-icon-viber:hover {
+  fill: #8c66a9;
+}
+
+.contacts-social ul li.svg-icon-whatsapp:hover {
+  fill: #42e35f;
+}
+
+.contacts-social ul li.svg-icon-telegram:hover {
+  fill: #2da1d3;
 }
