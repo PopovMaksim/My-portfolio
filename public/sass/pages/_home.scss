@@ -4,9 +4,16 @@
     color: $color-white;
 
     display: grid;
-    grid-template-rows: 45% 55%;
     grid-template-areas: "header"
                          "nav";
+
+    @include min700 {
+        grid-template-rows: 45% 55%;
+    }
+
+    @include max700 {
+        grid-template-rows: 35% 65%;
+    }
 }
 .home-header {
     grid-area: header;
@@ -19,8 +26,6 @@
     #logo {
         grid-area: logo;
 
-        font-size: 3rem;
-
         margin: .5em 1em;
 
         .logo-blue {
@@ -32,38 +37,96 @@
 
         text-align: center;
         font-family: 'Dosis', sans-serif;
-        font-size: 3rem;
         font-weight: 500;
         letter-spacing: .5em;
         text-transform: uppercase;
         -webkit-box-reflect: above 0 -webkit-gradient(linear, left bottom, left top, from(transparent), color-stop(0.35, transparent), to(rgba(0, 0, 0, 0.25)));
 
     }
+    
+    @include min700 {
+        #logo {
+            font-size: 3rem;
+        }
+        .home-page-heading {
+            font-size: 3rem;
+        }
+    }
+
+    @include max700 {
+        #logo {
+            font-size: 2rem;
+        }
+        .home-page-heading {
+            font-size: 2.5rem;
+        }
+    }
+
+    @include max550 {
+        #logo {
+            font-size: 1.5rem;
+        }
+        .home-page-heading {
+            font-size: 2rem;
+        }
+    }
 }
 .navigation {
     grid-area: nav;
 
     ul {
-        display: grid;
-        grid-template-columns: repeat(6, auto);
-        grid-template-rows: repeat(2, 1fr);
-        justify-items: center;
-        justify-content: center;
-        
-        li {
-            margin: 2em 1em;
+        @include min700 {
+            display: grid;
+            grid-template-columns: repeat(6, auto);
+            grid-template-rows: repeat(2, 1fr);
+            justify-items: center;
+            justify-content: center;
 
-            a {
-                font-size: 1.5rem;
+            li {
+                margin: 2em 1em;
+    
+                &:nth-child(-n+3) {
+                    grid-column: span 2;
+                }
+                &:nth-child(4),
+                &:nth-child(5) {
+                    grid-column: span 3;
+                } 
+
+                a {
+                    font-size: 1.5rem;
+                }
             }
         }
-        li:nth-child(-n+3) {
-            grid-column: span 2;
+        
+        @include max700 {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            li {
+                margin: 1em;
+
+                @for $i from 1 through 5 {
+                    &:nth-child(#{$i}) {
+                        width: 60% - $i * 3;
+                    }
+                }
+
+                a {
+                    font-size: 1.5rem;
+                    box-sizing: border-box;
+                    width: 100%;
+                    text-align: center;
+                }
+            }
         }
-        li:nth-child(4),
-        li:nth-child(5) {
-            grid-column: span 3;
-        } 
+
+        @include max550 {
+            li a {
+                font-size: 1.2rem;
+            }
+        }
     }
 }
 

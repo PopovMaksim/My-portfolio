@@ -2,6 +2,7 @@
     display: grid;
     grid-template-areas: 'info email'
                          'social email';
+    grid-column-gap: 2em;
 
     &-email {
         grid-area: email;
@@ -14,6 +15,8 @@
         }
         .email-content {
             margin: 2em 0;
+            max-width: 100%;
+            height: 15em;
         }
         .email-send {
             display: block;
@@ -38,45 +41,54 @@
 
     &-info {
         text-align: center;
+        align-self: center;
         span {
             font-weight: 600;
         }
-        a:hover {
-            color: $color-darkblue;
+        a {
+            white-space: pre;
+
+            &:hover {
+                color: $color-darkblue;
+            }
         }
     }
 
-    &-social ul {
-        display: flex;
-        justify-content: space-between;
-        max-width: 20em;
-        margin: 0 auto;
-        li {
-            fill: #aeaeae;
-            width: 20%;
-            transition: 0.5s;
-            
-            .svg-icon {
-                fill: $color-white;
-            }
+    &-social {
+        align-self: end;
 
-            &:hover {
-                transform: scale(1.1);
-            }
-            &.svg-icon-vk:hover {
-                fill: #4e7db2;
-            }
-            &.svg-icon-github:hover {
-                fill: #823f9a;
-            }
-            &.svg-icon-viber:hover {
-                fill: #8c66a9;
-            }
-            &.svg-icon-whatsapp:hover {
-                fill: #42e35f;
-            }
-            &.svg-icon-telegram:hover {
-                fill: #2da1d3;
+        ul {
+            display: flex;
+            justify-content: space-between;
+            max-width: 20em;
+            margin: 0 auto;
+            li {
+                fill: #aeaeae;
+                width: 20%;
+                transition: 0.1s;
+                
+                .svg-icon {
+                    fill: $color-white;
+                }
+
+                &:hover {
+                    transform: scale(1.1);
+                }
+                &.svg-icon-vk:hover {
+                    fill: #4e7db2;
+                }
+                &.svg-icon-github:hover {
+                    fill: #823f9a;
+                }
+                &.svg-icon-viber:hover {
+                    fill: #8c66a9;
+                }
+                &.svg-icon-whatsapp:hover {
+                    fill: #42e35f;
+                }
+                &.svg-icon-telegram:hover {
+                    fill: #2da1d3;
+                }
             }
         }
     }
