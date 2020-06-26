@@ -38,5 +38,9 @@
                 fill: #e94e31;
             }
         }
+
+        @include max700 {
+            width: 7em;
+        }
     } 
 }

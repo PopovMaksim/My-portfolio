@@ -15,20 +15,17 @@
         align-items: center;
         grid-gap: 2em;
     }
-    h4 {
-        font-size: 1.3rem;
-        text-transform: uppercase;
-    }
+    
     .period {
-        width: 8em;
         text-align: center;
+        
         .year {
             font-size: 1.7rem;
             font-weight: 900;
             line-height: .85em;
     
-            span{
-                font-size: 0.7em;
+            .period-present {
+                font-size: 1.1rem;
             }
         }
         p:nth-child(2) {
@@ -37,20 +34,54 @@
         }
     }
     .experience-info {
-        p:first-child {
-            font-weight: 500;
+        margin: 0 1em;
+
+        h5 span {
+            white-space: pre;
         }
-        p:last-child {
+        p {
             font-style: italic;
         }
-    }
-    
-    .head-experience-work {
-        text-align: right;
     }
     .experience-work {
         flex-direction: row-reverse;
         text-align: right;
+    }
+
+    @include min550 {
+        .period {
+            width: 8em;
+        }
+        .head-experience-work {
+            text-align: right;
+        }
+    }
+    
+    @include max550 {
+        h4 {
+            text-align: center;
+        }
+        .education,
+        .experience-work {
+            flex-direction: column;
+            text-align: left;
+        }
+        .period {
+            p {
+                margin: 0;
+            }
+            .year {
+                display: flex;
+                align-self: center;
+
+                span:nth-child(2) {
+                    padding: 0 0.5em;
+                }
+            }
+        }
+        .experience-info {
+            margin: 0.5em 1em;
+        }
     }
 }
 

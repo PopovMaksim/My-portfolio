@@ -28,7 +28,19 @@ ul {
 }
 
 h3 {
+  font-size: 1.25rem;
   text-align: center;
+}
+
+h4 {
+  font-size: 1.3rem;
+  text-transform: uppercase;
+}
+
+h5 {
+  font-size: 1.1rem;
+  font-weight: 500;
+  margin: 0.7em 0;
 }
 
 .button {
@@ -227,34 +239,31 @@ h3 {
   z-index: -1;
 }
 
-#about {
-  background-color: #d7fbff;
+.about {
   display: grid;
-  grid-template-areas: "header header" "img content" "info content";
+  grid-template-columns: 16em auto;
+  grid-template-areas: "img content" "info content";
   grid-column-gap: 3em;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  justify-items: center;
   margin: 0 auto;
-  padding: 2em 1.5em;
+  padding-bottom: 1.5em;
 }
 
-#about .about-image {
+.about .about-image {
   grid-area: img;
 }
 
-#about .about-image img {
+.about .about-image img {
   width: 15em;
   height: 15em;
   border-radius: 10em;
 }
 
-#about .about-info {
+.about .about-info {
   grid-area: info;
 }
 
-#about .about-info .info-item {
+.about .about-info .info-item {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -265,13 +274,38 @@ h3 {
           justify-content: space-between;
 }
 
-#about .about-info .info-item .info-title {
+.about .about-info .info-item p {
+  margin: 0.35em;
+}
+
+.about .about-info .info-item p.info-title {
   font-weight: bold;
 }
 
-#about .about-content {
+.about .about-content {
   grid-area: content;
   max-width: 40em;
+}
+
+@media screen and (max-width: 700px) {
+  .about {
+    grid-template-areas: "img info" "content content";
+    grid-template-columns: 1fr 2fr;
+    grid-column-gap: 1em;
+    justify-items: start;
+  }
+  .about .about-image img {
+    width: 10em;
+    height: 10em;
+  }
+}
+
+@media screen and (max-width: 550px) {
+  .about {
+    grid-template-areas: "img" "info" "content";
+    grid-template-columns: 1fr;
+    justify-items: center;
+  }
 }
 
 #experience {
@@ -299,13 +333,7 @@ h3 {
   grid-gap: 2em;
 }
 
-.experience h4 {
-  font-size: 1.3rem;
-  text-transform: uppercase;
-}
-
 .experience .period {
-  width: 8em;
   text-align: center;
 }
 
@@ -315,8 +343,8 @@ h3 {
   line-height: .85em;
 }
 
-.experience .period .year span {
-  font-size: 0.7em;
+.experience .period .year .period-present {
+  font-size: 1.1rem;
 }
 
 .experience .period p:nth-child(2) {
@@ -324,16 +352,16 @@ h3 {
   font-size: 0.9em;
 }
 
-.experience .experience-info p:first-child {
-  font-weight: 500;
+.experience .experience-info {
+  margin: 0 1em;
 }
 
-.experience .experience-info p:last-child {
+.experience .experience-info h5 span {
+  white-space: pre;
+}
+
+.experience .experience-info p {
   font-style: italic;
-}
-
-.experience .head-experience-work {
-  text-align: right;
 }
 
 .experience .experience-work {
@@ -343,6 +371,48 @@ h3 {
       -ms-flex-direction: row-reverse;
           flex-direction: row-reverse;
   text-align: right;
+}
+
+@media screen and (min-width: 550px) {
+  .experience .period {
+    width: 8em;
+  }
+  .experience .head-experience-work {
+    text-align: right;
+  }
+}
+
+@media screen and (max-width: 550px) {
+  .experience h4 {
+    text-align: center;
+  }
+  .experience .education,
+  .experience .experience-work {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    text-align: left;
+  }
+  .experience .period p {
+    margin: 0;
+  }
+  .experience .period .year {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-align-self: center;
+        -ms-flex-item-align: center;
+            align-self: center;
+  }
+  .experience .period .year span:nth-child(2) {
+    padding: 0 0.5em;
+  }
+  .experience .experience-info {
+    margin: 0.5em 1em;
+  }
 }
 
 #portfolio {
@@ -478,6 +548,12 @@ h3 {
   fill: #e94e31;
 }
 
+@media screen and (max-width: 700px) {
+  .skills .skills-item {
+    width: 7em;
+  }
+}
+
 .contacts {
   display: grid;
   grid-template-areas: 'info email' 'social email';
@@ -498,8 +574,8 @@ h3 {
 
 .contacts-email .email-content {
   margin: 2em 0;
-  max-width: 100%;
   height: 15em;
+  resize: vertical;
 }
 
 .contacts-email .email-send {
@@ -596,4 +672,13 @@ h3 {
 
 .contacts-social ul li.svg-icon-telegram:hover {
   fill: #2da1d3;
+}
+
+@media screen and (max-width: 700px) {
+  .contacts {
+    grid-template-areas: "info" "email" "social";
+  }
+  .contacts-social {
+    margin-top: 2em;
+  }
 }

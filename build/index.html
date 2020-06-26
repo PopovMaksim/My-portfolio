@@ -55,30 +55,32 @@
             <section class="heading">
                 <h2>Обо мне</h2>
             </section>
-            <section class="about-image">
-                <img src="img/avatar2.jpg" alt="avatar">
-            </section>
-            <section class="about-info">
-                <h3>Персональная информация</h3>
-                <ul>
-                    <li class="info-item">
-                        <p class="info-title">Имя</p>
-                        <p>Попов Максим Иванович</p>
-                    </li>
-                    <li class="info-item">
-                        <p class="info-title">Дата рождения</p>
-                        <p>14.08.1996</p>
-                    </li>
-                    <li class="info-item">
-                        <p class="info-title">Место жительства</p>
-                        <p>г. Шуя</p>
-                    </li>
-                </ul>
-            </section>
-            <section class="about-content">
-                <h3>Общая информация</h3>
-                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ea consequatur pariatur maiores assumenda obcaecati enim dolore dolorum numquam cupiditate! Numquam, non eos praesentium pariatur voluptas aliquid. Recusandae quos quia omnis?</p>
-            </section>
+            <div class="about container">
+                <section class="about-image">
+                    <img src="img/avatar2.jpg" alt="avatar">
+                </section>
+                <section class="about-info">
+                    <h3>Персональная информация</h3>
+                    <ul>
+                        <li class="info-item">
+                            <p class="info-title">Имя</p>
+                            <p>Попов Максим Иванович</p>
+                        </li>
+                        <li class="info-item">
+                            <p class="info-title">Дата рождения</p>
+                            <p>14.08.1996</p>
+                        </li>
+                        <li class="info-item">
+                            <p class="info-title">Место жительства</p>
+                            <p>г. Шуя</p>
+                        </li>
+                    </ul>
+                </section>
+                <section class="about-content">
+                    <h3>Общая информация</h3>
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ea consequatur pariatur maiores assumenda obcaecati enim dolore dolorum numquam cupiditate! Numquam, non eos praesentium pariatur voluptas aliquid. Recusandae quos quia omnis?</p>
+                </section>
+            </div>
         </div>
         <div id="experience">
             <section class="heading">
@@ -92,17 +94,21 @@
                         <p>Бакалавр</p>
                     </section>
                     <section class="experience-info">
-                        <p class="university">Ивановский государственный энергетический университет имени В. И. Ленина</p>
+                        <h5 class="university">Ивановский государственный энергетический университет имени <span>В. И. Ленина</span></h5>
                         <p class="specialty">Управление в технических системах</p>
                     </section>
                 </section>
                 <h4 class="head-experience-work">Работа</h4>
                 <section class="experience-work">
                     <section class="period">
-                        <p class="year">2018<br>-<br><span>наст. вр.</span></p>
+                        <div class="year">
+                            <span>2018</span>
+                            <span>-</span>
+                            <span class="period-present">наст. вр.</span>
+                        </div>
                     </section>
                     <section class="experience-info">
-                        <p class="profession">Системный администратор</p>
+                        <h5 class="profession">Системный администратор</h5>
                         <p class="description-work">Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta dicta perspiciatis recusandae obcaecati voluptatem animi minus, beatae, voluptatibus suscipit saepe repudiandae veritatis non quidem esse totam atque sed autem dignissimos!</p>
                     </section>
                 </section>
