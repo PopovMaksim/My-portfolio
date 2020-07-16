@@ -1,6 +1,7 @@
 const gulp = require('gulp'),
       sass = require('gulp-sass'),
-      autoprefixer = require('gulp-autoprefixer');
+      autoprefixer = require('gulp-autoprefixer'),
+      ghPages = require('gulp-gh-pages');
 
 gulp.task('sass', function() {
     return gulp.src('public/sass/**/*.scss')
@@ -24,6 +25,11 @@ gulp.task('watch', function() {
     gulp.watch('public/sass/**/*.scss', gulp.series('sass'));
     gulp.watch('public/script/*.js', gulp.series('js'));
 })
+
+gulp.task('deploy', function() {
+    return gulp.src('./build/**/*')
+      .pipe(ghPages());
+});
 
 gulp.task('default', gulp.series(
     gulp.parallel('html', 'sass', 'js'),
