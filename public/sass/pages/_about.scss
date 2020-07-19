@@ -1,6 +1,6 @@
 .about {
     display: grid;
-    grid-template-columns: 16em auto;
+    grid-template-columns: 17em auto;
     grid-template-areas: "img content"
                          "info content";
     grid-column-gap: 3em;
@@ -37,6 +37,7 @@
         grid-area: content;
 
         max-width: 40em;
+        line-height: 1.5em;
     }
     
     @include max700 {

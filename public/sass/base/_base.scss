@@ -46,16 +46,9 @@ h5 {
 
 .button {
     display: inline-block;
-
     font-weight: bold;
-    color: #105255;
-
     padding: .5em 1.7em;
-    background-color: $color-blue;
     border-radius: 5em;
-    box-shadow: 0 0 5px $color-blue,
-                0 0 25px $color-blue;
-
     transition: .5s !important;
 
     &:hover {

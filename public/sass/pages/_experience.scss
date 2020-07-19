@@ -20,6 +20,9 @@
         text-align: center;
         
         .year {
+            display: flex;
+            flex-direction: column;
+
             font-size: 1.7rem;
             font-weight: 900;
             line-height: .85em;
@@ -39,7 +42,8 @@
         h5 span {
             white-space: pre;
         }
-        p {
+        li {
+            margin: 0.5em 0;
             font-style: italic;
         }
     }
