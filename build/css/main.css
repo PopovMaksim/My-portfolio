@@ -48,9 +48,11 @@ h5 {
   font-weight: bold;
   padding: .5em 1.7em;
   border-radius: 5em;
-  -webkit-transition: .5s !important;
-  -o-transition: .5s !important;
-  transition: .5s !important;
+  -webkit-transition: -webkit-transform .5s !important;
+  transition: -webkit-transform .5s !important;
+  -o-transition: transform .5s !important;
+  transition: transform .5s !important;
+  transition: transform .5s, -webkit-transform .5s !important;
 }
 
 .button:hover {
@@ -272,6 +274,80 @@ h5 {
 
 .navigation #menu-icon span:nth-child(4) {
   top: 1.6em;
+}
+
+.navigation.menu-open {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  background-color: #151412;
+  opacity: 0.95;
+  -webkit-transition: 0.3s;
+  -o-transition: 0.3s;
+  transition: 0.3s;
+  z-index: 1;
+}
+
+@media screen and (max-width: 550px) {
+  .navigation.menu-open {
+    width: 100vw;
+  }
+}
+
+@media screen and (min-width: 550px) {
+  .navigation.menu-open {
+    width: 50vw;
+  }
+}
+
+@media screen and (min-width: 700px) {
+  .navigation.menu-open {
+    width: 30vw;
+  }
+}
+
+.navigation.menu-open #menu-icon span:nth-child(1) {
+  top: 18px;
+  width: 0%;
+  left: 50%;
+}
+
+.navigation.menu-open #menu-icon span:nth-child(2) {
+  -webkit-transform: rotate(45deg);
+      -ms-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+
+.navigation.menu-open #menu-icon span:nth-child(3) {
+  -webkit-transform: rotate(-45deg);
+      -ms-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+}
+
+.navigation.menu-open #menu-icon span:nth-child(4) {
+  top: 18px;
+  width: 0%;
+  left: 50%;
+}
+
+.navigation.menu-open ul {
+  position: relative;
+  top: 20%;
+  grid-template-columns: 1fr;
+  width: 100%;
+  z-index: 1;
+}
+
+.navigation.menu-open ul li {
+  margin: 0;
+}
+
+.navigation.menu-open ul li .button {
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  background-color: transparent;
+  color: #fff;
 }
 
 #bg-home-page {

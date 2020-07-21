@@ -171,7 +171,64 @@
             }
         }
     }
+
+    &.menu-open {
+        position: fixed;
+        top: 0;
+        left: 0;
+        height: 100vh;
+        background-color: $bg-black;
+        opacity: 0.95;
+        transition: 0.3s;
+        z-index: 1;
+
+        @include max550 {
+            width: 100vw;
+        }
+        @include min550 {
+            width: 50vw;
+        }
+        @include min700 {
+            width: 30vw;
+        }
+        #menu-icon span:nth-child(1) {
+            top: 18px;
+            width: 0%;
+            left: 50%;
+        }
+        #menu-icon span:nth-child(2) {
+            transform: rotate(45deg);
+        }
+        #menu-icon span:nth-child(3) {
+            transform: rotate(-45deg);
+        }
+        #menu-icon span:nth-child(4) {
+            top: 18px;
+            width: 0%;
+            left: 50%;
+        }
+
+        ul {
+            position: relative;
+            top: 20%;
+            grid-template-columns: 1fr;
+            width: 100%;
+            z-index: 1;
+            
+            li {
+                margin: 0;
+                .button {
+                    box-shadow: none;
+                    background-color: transparent;
+                    color: $color-white;
+                }
+            }
+        }
+
+    }
+    
 }
+
 
 
 
