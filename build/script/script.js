@@ -10,6 +10,9 @@ document.addEventListener('scroll', function() {
     if (scroll < heightWindow) {
         menuIcon.style.opacity = '0';
         menuIcon.style.left = '-3em';
+        if (nav.classList.contains('menu-open')) {
+            nav.classList.remove('menu-open');
+        }
     } else {
         menuIcon.style.opacity = '1';
         menuIcon.style.left = '2em';
