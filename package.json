@@ -22,5 +22,8 @@
     "gulp-gh-pages": "^0.5.4",
     "gulp-sass": "^4.1.0",
     "gulp-watch": "^5.0.1"
+  },
+  "dependencies": {
+    "lodash.template": "^4.5.0"
   }
 }
